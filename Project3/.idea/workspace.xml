@@ -2,17 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="483ff30c-78cb-486c-9e55-2dfaabb16f27" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/../Project2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project2/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project2/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Project2/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project2/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/../derby.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../移动公司/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/db.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../移动公司/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/log/log.ctrl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../移动公司/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/log/log1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../移动公司/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c10.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c10.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c101.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c101.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c111.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c111.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c121.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c121.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c130.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c130.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c141.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c141.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c180.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c180.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c1a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c1a1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c1b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c1b1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c20.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c230.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c230.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c241.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c241.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c31.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c380.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c380.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c391.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c391.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c3a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c3a1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c3b1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c3b1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c41.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c490.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c4a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c4a1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c51.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c60.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c81.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c90.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/ca1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/cf0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/cf0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/service.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/service.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +50,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Main.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
