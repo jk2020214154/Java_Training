@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="716a0c37-8ad6-4c61-95b3-331dc5df594f" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/../Project3/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project3/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project3/out/production/Project3/GUI2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/out/production/Project3/GUI2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project3/src/GUI2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project3/src/GUI2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/../derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/db.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/log/log.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/log/log1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c490.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c490.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../移动公司/seg0/c4a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../移动公司/seg0/c4a1.dat" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ITdATVVsjUQnpYtFTy0U7Kl0Ki" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Java/db-derby-10.14.2.0-bin/lib/derbynet.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;库&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="716a0c37-8ad6-4c61-95b3-331dc5df594f" name="变更" comment="" />
+      <created>1670209365072</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670209365072</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
