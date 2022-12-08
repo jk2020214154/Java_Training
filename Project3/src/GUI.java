@@ -1,7 +1,11 @@
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.sql.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Create with IntelliJ IDEA.
@@ -12,6 +16,8 @@ import java.sql.*;
  */
 public class GUI extends JFrame{
     //设计登陆界面
+    int GUIflag=0;
+    public static Map<String,String> map=new HashMap<String,String>();
     JPanel panel1 = new JPanel();
     JTextField usernameinput = new JTextField(20);
     JPasswordField passwordinput = new JPasswordField(20);
@@ -20,6 +26,7 @@ public class GUI extends JFrame{
     JButton buttonlogin = new JButton("登陆");
     JButton buttonlogout = new JButton("退出");
 
+    JButton buttonregister =new JButton("注册");
     JButton buttonhelp = new JButton("帮助");
 
 
@@ -27,6 +34,7 @@ public class GUI extends JFrame{
         //此处应设置尺寸,再居中
         this.setSize(width,height);//设置长宽
         init(title);
+        map.put("admin","root");//默认用户为admin,密码为root
         this.setVisible(true);//设置可见性
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//设置默认关闭方式
         buttonlogin.addActionListener(e->{
@@ -57,6 +65,9 @@ public class GUI extends JFrame{
         buttonhelp.addActionListener(e -> {
             JOptionPane.showMessageDialog(null,"默认用户名为:admin,密码是:root","帮助",JOptionPane.PLAIN_MESSAGE);
         });
+        buttonregister.addActionListener(e->{
+            new_Dialog("注册用户","取消");
+        });
     }
 
     public void init(String title) {
@@ -85,6 +96,7 @@ public class GUI extends JFrame{
         panel1.add(labeluser);//添加到面板
         panel1.add(labelpassword);//添加到面板
 
+
         usernameinput.setBounds(160,180,220,25);
         passwordinput.setBounds(160,230,220,25);
         panel1.add(usernameinput);
@@ -92,13 +104,83 @@ public class GUI extends JFrame{
 
         buttonlogin.setBounds(140,300,100,30);
         buttonlogout.setBounds(260,300,100,30);
+        buttonregister.setBounds(360,360,100,30);
         panel1.add(buttonlogin);
         panel1.add(buttonlogout);
+        panel1.add(buttonregister);
 
         buttonhelp.setBounds(360,410,100,30);
         panel1.add(buttonhelp);
 
     }
+    public void new_Dialog(String title,String button){
+        if(GUIflag==1)
+            return ;
+        GUIflag=1;
+
+        JDialog temp=new JDialog(this);
+        temp.setTitle(title);
+        temp.setSize(400,140);
+        temp.setLocationRelativeTo(null);//水平居中放置
+        temp.setVisible(true);
+        temp.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent eve){
+                GUIflag=0;
+            }
+        });
+
+        JLabel label_1=new JLabel("   用户名：");
+        JLabel label_2=new JLabel("    密  码 ：");
+        JTextField input_1=new JTextField(15);
+        JPasswordField input_2=new JPasswordField(15);
+        JButton button1=new JButton("注册");
+        JButton button2=new JButton(button);
+
+        JPanel panel_1 = new JPanel();
+        JPanel panel_2 = new JPanel();
+        JPanel panel_3 = new JPanel();
+
+        panel_1.add(label_1);
+        panel_1.add(input_1);
+        panel_2.add(label_2);
+        panel_2.add(input_2);
+        panel_3.add(button1);
+        panel_3.add(button2);
+
+        temp.setLayout(new BorderLayout());
+        temp.add(panel_1,BorderLayout.PAGE_START);
+        temp.add(panel_2,BorderLayout.CENTER);
+        temp.add(panel_3,BorderLayout.PAGE_END);
+        temp.setVisible(true);
 
 
+        button2.addActionListener(e->{
+            GUIflag=0;
+            temp.dispose();
+        });
+
+        button1.addActionListener(e -> {
+           String tempuser=input_1.getText().replace(" ","");
+           String temppass=String.valueOf(input_2.getPassword());
+           if((tempuser!=null&&!tempuser.trim().equals(""))&&(temppass!=null&&!temppass.trim().equals(""))) {
+               if (map.get(tempuser) != null) {
+                   JOptionPane.showMessageDialog(null, "该用户已存在,请重新输入", "消息提示", JOptionPane.ERROR_MESSAGE);
+                   input_1.setText("");
+                   input_2.setText("");
+               } else {
+                   map.put(tempuser, temppass);
+                   JOptionPane.showMessageDialog(null, "注册成功!", "注册用户", JOptionPane.PLAIN_MESSAGE);
+                   input_1.setText("");
+                   input_2.setText("");
+               }
+           }
+           else {
+               JOptionPane.showMessageDialog(null,"无效用户,请重新输入","消息提示",JOptionPane.ERROR_MESSAGE);
+               input_1.setText("");
+               input_2.setText("");
+           }
+        });
+    }
 }
+
+

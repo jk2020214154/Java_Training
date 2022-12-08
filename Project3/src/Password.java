@@ -12,15 +12,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Password {
+
     public boolean checkPass(String username,String password)
     {
-        Map<String,String> map=new HashMap<String,String>();
-        map.put("admin","root");//默认用户为admin,密码为root
+
         String tempuser=username.replace(" ","");//把用户名多余空格去掉
 
         //System.out.println(tempuser);
         //System.out.println(password);
-        return password.equals(map.get(tempuser));
+        return password.equals(GUI.map.get(tempuser));
     }
 }
 
