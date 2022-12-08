@@ -1,13 +1,13 @@
 ----------------------------------------------------------------
-Thu Dec 08 17:28:56 CST 2022:
-正在使用类加载程序 sun.misc.Launcher$AppClassLoader@18b4aac2 引导数据库
-目录 E:\大学\专业课\3.1Java\实训\移动公司 中的 Derby 版本 The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579) 实例 a816c00e-0184-f111-0a86-00000caa8d20
-已从 file:/C:/Program%20Files/Java/db-derby-10.14.2.0-bin/lib/derby.jar 加载
+Thu Dec 08 21:21:42 CST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0184-f1e6-23b8-00000d590210 
+on database directory E:\��ѧ\רҵ��\3.1Java\ʵѵ\�ƶ���˾ with class loader sun.misc.Launcher$AppClassLoader@55f96302 
+Loaded from file:/E:/%e5%a4%a7%e5%ad%a6/%e4%b8%93%e4%b8%9a%e8%af%be/3.1Java/%e5%ae%9e%e8%ae%ad/Project3/libs/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_341-b10
-user.dir=E:\大学\专业课\3.1Java\实训\Project3
+user.dir=E:\��ѧ\רҵ��\3.1Java\ʵѵ\Project3
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
 derby.system.home=null
-数据库类加载程序已启动 - derby.database.classpath=''
+Database Class Loader started - derby.database.classpath=''
