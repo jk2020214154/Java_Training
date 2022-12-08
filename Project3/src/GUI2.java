@@ -540,159 +540,208 @@ public class GUI2 extends JDialog {
 
                 button1.addActionListener(e->{
                     int flag=0;
-
+                    int flaggg[]=new int[7];
                     String tempid=input_1.getText().replace(" ","");
 
                     try {
                         con = DriverManager.getConnection("jdbc:derby:E:\\大学\\专业课\\3.1Java\\实训\\移动公司;create=true");
                         System.out.println("数据库已成功连接!");
-
                         Staff sta=new Staff();
                         sta.id=input_11.getText().replace(" ","");
-                        if(sta.id!=null&&!sta.id.trim().equals("")) {
-                            if (sta.id.equals(input_1.getText().replace(" ", ""))) {
-                                JOptionPane.showMessageDialog(null, "新序号与原序号相同,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
-                                input_11.setText("");
-                                input_12.setText("");
-                                input_13.setText("");
-                                input_14.setText("");
-                                input_15.setText("");
-                                input_16.setText("");
+                        if(flag>=0) {
+                            if (sta.id != null && !sta.id.trim().equals("")) {
+                                if (sta.id.equals(input_1.getText().replace(" ", ""))) {
+                                    flag = -1;
+                                    JOptionPane.showMessageDialog(null, "新序号与原序号相同,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
+                                    input_11.setText("");
+                                    input_12.setText("");
+                                    input_13.setText("");
+                                    input_14.setText("");
+                                    input_15.setText("");
+                                    input_16.setText("");
+                                } else {
+                                    int flagg = 0;
+                                    for (int i = 0; i < Main.data.size(); i++) {
+                                        if (sta.id.equals(Main.data.get(i).id)) {
+                                            flagg = 1;
+                                            flag = 0;
+                                            JOptionPane.showMessageDialog(null, "新序号与记录表中的序号相同,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
+                                            input_11.setText("");
+                                            input_12.setText("");
+                                            input_13.setText("");
+                                            input_14.setText("");
+                                            input_15.setText("");
+                                            input_16.setText("");
+                                            break;
+                                        }
+                                    }
+                                    if (flagg == 0) {
+                                        flaggg[1] = 1;
+                                        flag++;
+                                    }
+                                }
                             }
-                            else {
-                                int flagg = 0;
-                                for (int i = 0; i < Main.data.size(); i++) {
-                                    if (sta.id.equals(Main.data.get(i).id)) {
-                                        flagg = 1;
-                                        flag=0;
-                                        JOptionPane.showMessageDialog(null, "新序号与记录表中的序号相同,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
+                        }
+                        if(flag>=0) {
+                            sta.name = input_12.getText().replace(" ", "");
+                            if (sta.name != null && !sta.name.trim().equals("")) {
+                                if (sta.name.equals(input_2.getText().replace(" ", ""))) {
+                                    flag = -1;
+                                    JOptionPane.showMessageDialog(null, "新名字与原名字相同,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
+                                    input_11.setText("");
+                                    input_12.setText("");
+                                    input_13.setText("");
+                                    input_14.setText("");
+                                    input_15.setText("");
+                                    input_16.setText("");
+                                } else {//必然有该元素
+                                    flaggg[2] = 1;
+                                    flag++;
+                                }
+                            }
+                        }
+                        if(flag>=0) {
+                            sta.sex = input_13.getText().replace(" ", "");
+                            if (sta.sex != null && !sta.sex.trim().equals("")) {
+                                if (sta.name.equals(input_3.getText().replace(" ", ""))) {
+                                    flag = -1;
+                                    JOptionPane.showMessageDialog(null, "新性别与原性别相同,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
+                                    input_11.setText("");
+                                    input_12.setText("");
+                                    input_13.setText("");
+                                    input_14.setText("");
+                                    input_15.setText("");
+                                    input_16.setText("");
+                                } else {//必然有该元素
+                                    if (!sta.sex.equals("男") && !sta.sex.equals("女")) {
+                                        flag = -1;
+                                        JOptionPane.showMessageDialog(null, "性别应只有男女,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
                                         input_11.setText("");
                                         input_12.setText("");
                                         input_13.setText("");
                                         input_14.setText("");
                                         input_15.setText("");
                                         input_16.setText("");
-                                        break;
+                                    } else {
+                                        flaggg[3] = 1;
+                                        flag++;
                                     }
                                 }
-                                if (flagg == 0) {
-                                    String sql="update 职员表 set id=? where id=?";
-                                    preparedstatement = con.prepareStatement(sql);
-                                    preparedstatement.setString(1, sta.id);
-                                    preparedstatement.setString(2, tempid);
-                                    preparedstatement.executeUpdate();
-                                    tempid = sta.id;
+                            }
+                        }
+                        if(flag>=0) {
+                            sta.day = input_14.getText().replace(" ", "");
+                            sta.to_sql();
+                            if (sta.day != null && !sta.day.trim().equals("")) {
+                                if (sta.day.equals(input_4.getText().replace(" ", ""))) {
+                                    flag = -1;
+                                    JOptionPane.showMessageDialog(null, "新出生与原出生相同,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
+                                    input_11.setText("");
+                                    input_12.setText("");
+                                    input_13.setText("");
+                                    input_14.setText("");
+                                    input_15.setText("");
+                                    input_16.setText("");
+                                } else {//必然有该元素
+                                    flaggg[4] = 1;
                                     flag++;
                                 }
                             }
                         }
+                        if(flag>=0) {
+                            sta.address = input_15.getText().replace(" ", "");
+                            if (sta.address != null && !sta.address.trim().equals("")) {
+                                if (sta.address.equals(input_5.getText().replace(" ", ""))) {
+                                    flag = -1;
+                                    JOptionPane.showMessageDialog(null, "新地址与原地址相同,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
+                                    input_11.setText("");
+                                    input_12.setText("");
+                                    input_13.setText("");
+                                    input_14.setText("");
+                                    input_15.setText("");
+                                    input_16.setText("");
+                                } else {//必然有该元素
+                                    flaggg[5] = 1;
+                                    flag++;
+                                }
+                            }
+                        }
+                        String tempsalary = input_16.getText().replace(" ", "");
+                        if(flag>=0) {
+                            if (tempsalary != null && !tempsalary.trim().equals("")) {
+                                if (tempsalary.equals(input_6.getText().replace(" ", ""))) {
+                                    flag = -1;
+                                    JOptionPane.showMessageDialog(null, "新工资与原工资相同,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
+                                    input_11.setText("");
+                                    input_12.setText("");
+                                    input_13.setText("");
+                                    input_14.setText("");
+                                    input_15.setText("");
+                                    input_16.setText("");
+                                } else {//必然有该元素
+                                    if (isNumeric(tempsalary) == false) {
+                                        flag = -1;
+                                        JOptionPane.showMessageDialog(null, "输入工资不为数字,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
+                                        input_11.setText("");
+                                        input_12.setText("");
+                                        input_13.setText("");
+                                        input_14.setText("");
+                                        input_15.setText("");
+                                        input_16.setText("");
+                                    } else {
+                                        flaggg[6] = 1;
+                                        flag++;
+                                    }
+                                }
+                            }
+                        }
+                        if(flag>0) {
+                            for(int i=1;i<=6;i++)
+                            {
+                                if(flaggg[i]==1){
+                                    if(i==1){
+                                        String sql = "update 职员表 set id=? where id=?";
+                                        preparedstatement = con.prepareStatement(sql);
+                                        preparedstatement.setString(1, sta.id);
+                                        preparedstatement.setString(2, tempid);
+                                        preparedstatement.executeUpdate();
+                                        tempid = sta.id;
+                                    }else if(i==2){
+                                        String sql = "update 职员表 set 姓名=? where id=?";
+                                        preparedstatement = con.prepareStatement(sql);
+                                        System.out.println(sta.name + "???");
+                                        preparedstatement.setString(1, sta.name);
+                                        preparedstatement.setString(2, tempid);
+                                        preparedstatement.executeUpdate();
+                                    }else if(i==3){
+                                        String sql = "update 职员表 set 性别=? where id=?";
+                                        preparedstatement = con.prepareStatement(sql);
+                                        preparedstatement.setString(1, sta.sex);
+                                        preparedstatement.setString(2, tempid);
+                                        preparedstatement.executeUpdate();
+                                    }else if(i==4){
+                                        String sql = "update 职员表 set 出生=? where id=?";
+                                        preparedstatement = con.prepareStatement(sql);
+                                        preparedstatement.setDate(1, sta.sqldate);
+                                        preparedstatement.setString(2, tempid);
+                                        preparedstatement.executeUpdate();
+                                    }else if(i==5){
+                                        String sql = "update 职员表 set 地址=? where id=?";
+                                        preparedstatement = con.prepareStatement(sql);
+                                        preparedstatement.setString(1, sta.address);
+                                        preparedstatement.setString(2, tempid);
+                                        preparedstatement.executeUpdate();
+                                    }else if(i==6){
+                                        sta.salary = Float.parseFloat(tempsalary);
+                                        String sql = "update 职员表 set 工资=? where id=?";
+                                        preparedstatement = con.prepareStatement(sql);
+                                        preparedstatement.setFloat(1, sta.salary);
+                                        preparedstatement.setString(2, tempid);
+                                        preparedstatement.executeUpdate();
+                                    }
+                                }
+                            }
 
-                        sta.name=input_12.getText().replace(" ","");
-                        if(sta.name!=null&&!sta.name.trim().equals("")) {
-                            if (sta.name.equals(input_2.getText().replace(" ", ""))) {
-                                flag=0;
-                                JOptionPane.showMessageDialog(null, "新名字与原名字相同,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
-                                input_11.setText("");input_12.setText("");input_13.setText("");
-                                input_14.setText("");input_15.setText("");input_16.setText("");
-                            }
-                            else{//必然有该元素
-                                String sql="update 职员表 set 姓名=? where id=?";
-                                preparedstatement = con.prepareStatement(sql);
-                                System.out.println(sta.name+"???");
-                                preparedstatement.setString(1, sta.name);
-                                preparedstatement.setString(2, tempid);
-                                preparedstatement.executeUpdate();
-                                flag++;
-                            }
-                        }
-                        sta.sex=input_13.getText().replace(" ","");
-                        if(sta.sex!=null&&!sta.sex.trim().equals("")) {
-                            if (sta.name.equals(input_3.getText().replace(" ", ""))) {
-                                flag=0;
-                                JOptionPane.showMessageDialog(null, "新性别与原性别相同,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
-                                input_11.setText("");input_12.setText("");input_13.setText("");
-                                input_14.setText("");input_15.setText("");input_16.setText("");
-                            }
-                            else{//必然有该元素
-                                if(!sta.sex.equals("男")&&!sta.sex.equals("女")) {
-                                    flag=0;
-                                    JOptionPane.showMessageDialog(null, "性别应只有男女,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
-                                    input_11.setText("");input_12.setText("");input_13.setText("");
-                                    input_14.setText("");input_15.setText("");input_16.setText("");
-                                }
-                                else {
-                                    String sql="update 职员表 set 性别=? where id=?";
-                                    preparedstatement = con.prepareStatement(sql);
-                                    preparedstatement.setString(1, sta.sex);
-                                    preparedstatement.setString(2, tempid);
-                                    preparedstatement.executeUpdate();
-                                    flag++;
-                                }
-                            }
-                        }
-                        sta.day = input_14.getText().replace(" ", "");
-                        sta.to_sql();
-                        if(sta.day!=null&&!sta.day.trim().equals("")) {
-                            if (sta.day.equals(input_4.getText().replace(" ", ""))) {
-                                flag=0;
-                                JOptionPane.showMessageDialog(null, "新出生与原出生相同,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
-                                input_11.setText("");input_12.setText("");input_13.setText("");
-                                input_14.setText("");input_15.setText("");input_16.setText("");
-                            }
-                            else{//必然有该元素
-                                String sql="update 职员表 set 出生=? where id=?";
-                                preparedstatement = con.prepareStatement(sql);
-                                preparedstatement.setDate(1, sta.sqldate);
-                                preparedstatement.setString(2, tempid);
-                                preparedstatement.executeUpdate();
-                                flag++;
-                            }
-                        }
-
-                        sta.address=input_15.getText().replace(" ","");
-                        if(sta.address!=null&&!sta.address.trim().equals("")) {
-                            if (sta.address.equals(input_5.getText().replace(" ", ""))) {
-                                flag=0;
-                                JOptionPane.showMessageDialog(null, "新地址与原地址相同,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
-                                input_11.setText("");input_12.setText("");input_13.setText("");
-                                input_14.setText("");input_15.setText("");input_16.setText("");
-                            }
-                            else{//必然有该元素
-                                String sql="update 职员表 set 地址=? where id=?";
-                                preparedstatement = con.prepareStatement(sql);
-                                preparedstatement.setString(1, sta.address);
-                                preparedstatement.setString(2, tempid);
-                                preparedstatement.executeUpdate();
-                                flag++;
-                            }
-                        }
-                        String tempsalary=input_16.getText().replace(" ","");
-                        if(tempsalary!=null&&!tempsalary.trim().equals("")) {
-                            if (tempsalary.equals(input_6.getText().replace(" ", ""))) {
-                                flag=0;
-                                JOptionPane.showMessageDialog(null, "新工资与原工资相同,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
-                                input_11.setText("");input_12.setText("");input_13.setText("");
-                                input_14.setText("");input_15.setText("");input_16.setText("");
-                            }
-                            else{//必然有该元素
-                                if(isNumeric(tempsalary) == false) {
-                                    flag=0;
-                                    JOptionPane.showMessageDialog(null, "输入工资不为数字,请重新输入!", "警告", JOptionPane.ERROR_MESSAGE);
-                                    input_11.setText("");input_12.setText("");input_13.setText("");
-                                    input_14.setText("");input_15.setText("");input_16.setText("");
-                                }
-                                else {
-                                    sta.salary=Float.parseFloat(tempsalary);
-                                    String sql="update 职员表 set 工资=? where id=?";
-                                    preparedstatement = con.prepareStatement(sql);
-                                    preparedstatement.setFloat(1, sta.salary);
-                                    preparedstatement.setString(2, tempid);
-                                    preparedstatement.executeUpdate();
-                                    flag++;
-                                }
-                            }
-                        }
-                        if(flag!=0) {
                             JOptionPane.showMessageDialog(null, "修改成功!", "修改记录", JOptionPane.PLAIN_MESSAGE);
                             sqlinit();
                             String thead[] = {"序号id", "姓名name", "性别sex", "出生birth", "地址addr", "工资salary"};
